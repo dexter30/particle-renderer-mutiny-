@@ -1,0 +1,38 @@
+#ifndef DYNN_EMITTER_H
+#define DYNN_EMITTER_H
+#include <mutiny/mutiny.h>
+
+namespace mutiny
+{
+
+	namespace engine
+	{
+
+	class GameObject;
+	class Material;
+
+		class dynnEmitter: public Component
+		{
+		public:
+		
+		private:
+			ref<Mesh> desh;
+			virtual void render();
+			virtual void awake();
+			int numbParticles;
+			float centre;
+			float radiusRange;
+Vector3 mouse;
+		Vector3 position;
+		Vector3 localPosition;
+		TwBar *myBar;
+		ref<Transform> transform;
+		std::vector<dynnParticles> allParticles;
+		GLuint vertBuff;
+		GLuint uvBuff;
+		ref<Material> material;
+		Vector3 direction;
+		}
+	}
+}
+#endif
